@@ -16,7 +16,7 @@ export class IntegratorUiPlugin
       title: PLUGIN_NAME,
       async mount(params: AppMountParameters) {
         // Load application bundle
-        const { renderApp } = await import('./application');
+        const { renderApp } = await import('./app');
         // Get start services as specified in opensearch_dashboards.json
         const [coreStart, depsStart] = await core.getStartServices();
         // Render the application

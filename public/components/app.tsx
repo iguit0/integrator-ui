@@ -4,22 +4,19 @@ import { FormattedMessage, I18nProvider } from '@osd/i18n/react';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 import {
-  EuiButton,
-  EuiHorizontalRule,
   EuiPage,
   EuiPageBody,
   EuiPageContent,
   EuiPageContentBody,
-  EuiPageContentHeader,
   EuiPageHeader,
   EuiTitle,
-  EuiText,
 } from '@elastic/eui';
 
 import { CoreStart } from '../../../../src/core/public';
 import { NavigationPublicPluginStart } from '../../../../src/plugins/navigation/public';
 
 import { PLUGIN_ID, PLUGIN_NAME } from '../../common';
+import { TabsList } from './tabs';
 
 interface IntegratorUiAppDeps {
   basename: string;
@@ -34,27 +31,24 @@ export const IntegratorUiApp = ({
   http,
   navigation,
 }: IntegratorUiAppDeps) => {
-  // Use React hooks to manage state.
-  const [timestamp, setTimestamp] = useState<string | undefined>();
+  // const [timestamp, setTimestamp] = useState<string | undefined>();
 
-  const onClickHandler = () => {
-    setTimestamp(new Date().toISOString());
-    notifications.toasts.addSuccess(PLUGIN_NAME);
-  };
+  // const onClickHandler = () => {
+  //   setTimestamp(new Date().toISOString());
+  //   notifications.toasts.addSuccess(PLUGIN_NAME);
+  // };
 
-  // Render the application DOM.
-  // Note that `navigation.ui.TopNavMenu` is a stateful component exported on the `navigation` plugin's start contract.
   return (
     <Router basename={basename}>
       <I18nProvider>
         <>
           <navigation.ui.TopNavMenu
             appName={PLUGIN_ID}
-            showSearchBar={true}
+            showSearchBar={false}
             useDefaultBehaviors={true}
           />
           <EuiPage restrictWidth="1000px">
-            <EuiPageBody component="main">
+            <EuiPageBody panelled component="main">
               <EuiPageHeader>
                 <EuiTitle size="l">
                   <h1>
@@ -66,39 +60,8 @@ export const IntegratorUiApp = ({
                   </h1>
                 </EuiTitle>
               </EuiPageHeader>
-              <EuiPageContent>
-                <EuiPageContentHeader>
-                  <EuiTitle>
-                    <h2>
-                      <FormattedMessage
-                        id="integratorUi.congratulationsTitle"
-                        defaultMessage="Congratulations, you have successfully created a new OpenSearch Dashboards Plugin!"
-                      />
-                    </h2>
-                  </EuiTitle>
-                </EuiPageContentHeader>
-                <EuiPageContentBody>
-                  <EuiText>
-                    <p>
-                      <FormattedMessage
-                        id="integratorUi.content"
-                        defaultMessage="Look through the generated code and check out the plugin development documentation."
-                      />
-                    </p>
-                    <EuiHorizontalRule />
-                    <p>
-                      <FormattedMessage
-                        id="integratorUi.timestampText"
-                        defaultMessage="Last timestamp: {time}"
-                        values={{ time: timestamp ? timestamp : 'Unknown' }}
-                      />
-                    </p>
-                    <EuiButton type="primary" size="s" onClick={onClickHandler}>
-                      <FormattedMessage id="integratorUi.buttonText" defaultMessage="Click me" />
-                    </EuiButton>
-                  </EuiText>
-                </EuiPageContentBody>
-              </EuiPageContent>
+
+              <TabsList />
             </EuiPageBody>
           </EuiPage>
         </>
