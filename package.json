@@ -1,6 +1,12 @@
 {
-  "name": "integratorUi",
+  "name": "integrator-ui",
   "version": "0.0.0",
+  "description": "",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iguit0/integrator-ui"
+  },
   "private": true,
   "scripts": {
     "build": "yarn plugin-helpers build",
