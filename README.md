@@ -5,7 +5,7 @@ Simple plugin for observing service logs from various sources.
 ### TO DO List
 
 - [x] Tabs
-- [ ] Azure Page
+- [x] Azure Page
 - [ ] Log Source page
 - [ ] Styling
 - [ ] I18n
