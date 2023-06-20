@@ -1,6 +1,6 @@
 ## Integrator UI
 
-...
+Simple plugin for observing service logs from various sources.
 
 ## Conventions
 
