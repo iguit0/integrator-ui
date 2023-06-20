@@ -2,15 +2,23 @@
 
 Simple plugin for observing service logs from various sources.
 
-## Conventions
+### TO DO List
+
+- [x] Tabs
+- [ ] Log Source page and Azure Page
+- [ ] Styling
+- [ ] I18n
+- [ ] Transform to OpenSearch convention (filenames, folders, etc.)
+
+### Conventions
 
 This project should follow OpenSearch [conventions](https://github.com/opensearch-project/OpenSearch-Dashboards/blob/main/src/core/CONVENTIONS.md#plugin-structure).
 
-## License
+### License
 
 This project is licensed under the [Apache v2.0 License](LICENSE.txt).
 
-## Copyright
+### Copyright
 
 Copyright OpenSearch Contributors. See [NOTICE](NOTICE.txt) for details.
 
