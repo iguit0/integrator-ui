@@ -1,7 +1,8 @@
 import React, { useMemo } from 'react';
 import { FormattedMessage, I18nProvider } from '@osd/i18n/react';
-import { EuiTabbedContent, EuiText } from '@elastic/eui';
+import { EuiPageContentBody, EuiSpacer, EuiTabbedContent, EuiText } from '@elastic/eui';
 import { AzurePage } from './azure-page';
+import { AvailablePage } from './available-page';
 
 export const TabsList = () => {
   const tabs = useMemo(
@@ -15,7 +16,12 @@ export const TabsList = () => {
             values={{ name: 'Connected' }}
           />
         ),
-        content: <>Connected</>,
+        content: (
+          <EuiPageContentBody paddingSize="l">
+            <EuiSpacer size="xl" />
+            Any Content
+          </EuiPageContentBody>
+        ),
       },
       {
         id: 'tab-available',
@@ -26,7 +32,7 @@ export const TabsList = () => {
             values={{ name: 'Available' }}
           />
         ),
-        content: <EuiText>Available</EuiText>,
+        content: <AvailablePage />,
       },
       {
         id: 'tab-azure',
@@ -48,7 +54,12 @@ export const TabsList = () => {
             values={{ name: 'AWS' }}
           />
         ),
-        content: <>AWS</>,
+        content: (
+          <EuiPageContentBody paddingSize="l">
+            <EuiSpacer size="xl" />
+            Any Content
+          </EuiPageContentBody>
+        ),
       },
       {
         id: 'tab-windows',
@@ -59,7 +70,12 @@ export const TabsList = () => {
             values={{ name: 'Windows' }}
           />
         ),
-        content: <EuiText>Windows</EuiText>,
+        content: (
+          <EuiPageContentBody paddingSize="l">
+            <EuiSpacer size="xl" />
+            Any Content
+          </EuiPageContentBody>
+        ),
       },
       {
         id: 'tab-firewall',
@@ -70,7 +86,12 @@ export const TabsList = () => {
             values={{ name: 'Firewall' }}
           />
         ),
-        content: <EuiText>Firewall</EuiText>,
+        content: (
+          <EuiPageContentBody paddingSize="l">
+            <EuiSpacer size="xl" />
+            Any Content
+          </EuiPageContentBody>
+        ),
       },
     ],
     []
@@ -78,7 +99,7 @@ export const TabsList = () => {
 
   return (
     <I18nProvider>
-      <EuiTabbedContent tabs={tabs} initialSelectedTab={tabs[2]} />
+      <EuiTabbedContent tabs={tabs} initialSelectedTab={tabs[0]} />
     </I18nProvider>
   );
 };
