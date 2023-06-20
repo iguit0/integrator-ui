@@ -8,6 +8,7 @@ Simple plugin for observing service logs from various sources.
 - [ ] Log Source page and Azure Page
 - [ ] Styling
 - [ ] I18n
+- [ ] Linting
 - [ ] Transform to OpenSearch convention (filenames, folders, etc.)
 
 ### Conventions
