@@ -6,11 +6,7 @@ import {
   EuiFlexGroup,
   EuiFlexItem,
   EuiText,
-  EuiFormRow,
   EuiSwitch,
-  EuiPanel,
-  EuiCard,
-  EuiFlexGrid,
   EuiButton,
 } from '@elastic/eui';
 

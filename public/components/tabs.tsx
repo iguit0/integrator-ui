@@ -1,8 +1,8 @@
 import React, { useMemo } from 'react';
 import { FormattedMessage, I18nProvider } from '@osd/i18n/react';
-import { EuiPageContentBody, EuiSpacer, EuiTabbedContent, EuiText } from '@elastic/eui';
+import { EuiPageContentBody, EuiSpacer, EuiTabbedContent } from '@elastic/eui';
 import { AzurePage } from './azure-page';
-import { AvailablePage } from './available-page';
+import { ConnectedPage } from './connected-page';
 
 export const TabsList = () => {
   const tabs = useMemo(
@@ -16,12 +16,7 @@ export const TabsList = () => {
             values={{ name: 'Connected' }}
           />
         ),
-        content: (
-          <EuiPageContentBody paddingSize="l">
-            <EuiSpacer size="xl" />
-            Any Content
-          </EuiPageContentBody>
-        ),
+        content: <ConnectedPage />,
       },
       {
         id: 'tab-available',
@@ -32,7 +27,12 @@ export const TabsList = () => {
             values={{ name: 'Available' }}
           />
         ),
-        content: <AvailablePage />,
+        content: (
+          <EuiPageContentBody paddingSize="l">
+            <EuiSpacer size="xl" />
+            Any Content
+          </EuiPageContentBody>
+        ),
       },
       {
         id: 'tab-azure',
