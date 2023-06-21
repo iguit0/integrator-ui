@@ -48,7 +48,11 @@ To clone the repository to your local machine, follow these steps:
 
 ### Installation
 
-Soon...
+- OpenSearch instance. If you face any challenges, see more details in the [developer guide](https://github.com/opensearch-project/OpenSearch/blob/main/DEVELOPER_GUIDE.md).
+
+- OpenSearch Dashboard's instance. If you face any challenges, see more details in the [developer guide](https://github.com/opensearch-project/OpenSearch-Dashboards/blob/main/DEVELOPER_GUIDE.md).
+
+- Install plugin in OpenSearch Dashboards. [Follow this guide](https://github.com/opensearch-project/opensearch-plugins/blob/main/INSTALLING.md#installing-opensearch-dashboards-plugins)
 
 ## Contributing
 
