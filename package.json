@@ -12,5 +12,6 @@
     "build": "yarn plugin-helpers build",
     "plugin-helpers": "../../scripts/use_node ../../scripts/plugin_helpers",
     "osd": "../../scripts/use_node ../../scripts/osd"
-  }
+  },
+  "dependencies": {}
 }

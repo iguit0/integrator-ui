@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { i18n } from '@osd/i18n';
 import {
   EuiSpacer,
   EuiImage,
@@ -50,7 +51,15 @@ export const AzurePage = () => {
             />
           </EuiFlexItem>
           <EuiFlexItem grow={false}>
-            <EuiButton fill>Manage</EuiButton>
+            <EuiButton
+              fill
+              style={{ backgroundColor: 'rgb(23 102 145)', border: 'none' }}
+              contentProps={{ style: { fontWeight: 'bold', color: 'white' } }}
+            >
+              {i18n.translate('manage', {
+                defaultMessage: 'Manage',
+              })}
+            </EuiButton>
           </EuiFlexItem>
         </EuiFlexGroup>
         <EuiSpacer size="l" />

@@ -3,5 +3,5 @@
   "paths": {
     "integratorUi": "."
   },
-  "translations": ["translations/pt-BR.json"]
+  "translations": ["translations/en-US.json", "translations/pt-BR.json"]
 }

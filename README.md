@@ -12,7 +12,8 @@ Simple plugin for observing service logs from various sources.
 - [Introduction](#introduction)
 - [Todo List](#todo-list)
 - [Get Started](#get-started)
-  - [Installation](#installation)
+- [Installation](#installation)
+  - [Run](#run)
 - [Contributing](#contributing)
 - [License](#license)
 - [Copyright](#copyright)
@@ -46,13 +47,29 @@ To clone the repository to your local machine, follow these steps:
     cd integrator-ui
 ```
 
-### Installation
+## Installation
 
 - OpenSearch instance. If you face any challenges, see more details in the [developer guide](https://github.com/opensearch-project/OpenSearch/blob/main/DEVELOPER_GUIDE.md).
 
 - OpenSearch Dashboard's instance. If you face any challenges, see more details in the [developer guide](https://github.com/opensearch-project/OpenSearch-Dashboards/blob/main/DEVELOPER_GUIDE.md).
 
 - Install plugin in OpenSearch Dashboards. [Follow this guide](https://github.com/opensearch-project/opensearch-plugins/blob/main/INSTALLING.md#installing-opensearch-dashboards-plugins)
+
+### Run
+
+1. Open a OpenSearch Dashboard terminal
+```shell
+    yarn osd bootstrap && yarn opensearch snapshot
+```
+
+
+
+2. Open a second OpenSearch Dashboard terminal
+```shell
+    yarn start
+```
+
+Wait for the terminal stop scrolling and go to http://localhost:5603
 
 ## Contributing
 

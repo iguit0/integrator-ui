@@ -7,7 +7,7 @@ import { IntegratorUiApp } from './components/app';
 export const renderApp = (
   { notifications, http }: CoreStart,
   { navigation }: AppPluginStartDependencies,
-  { appBasePath, element }: AppMountParameters // TODO: investigate appBasePath deprecated
+  { appBasePath, element }: AppMountParameters
 ) => {
   ReactDOM.render(
     <IntegratorUiApp
