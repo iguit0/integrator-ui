@@ -27,7 +27,7 @@ Simple plugin for observing service logs from various sources.
 - [x] Tabs
 - [x] Azure Page
 - [x] Log Source page
-- [ ] Styling
+- [ ] Style: Theme Provider
 - [ ] I18n
 - [ ] Linting
 - [ ] Transform to OpenSearch convention (filenames, folders, etc.)
